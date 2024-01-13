@@ -2,24 +2,23 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <modules>
-        <module>hibernate-practice-demo</module>
-    </modules>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.14</version>
-        <relativePath/>
+        <artifactId>demo-project-hibernate-tutorial</artifactId>
+        <groupId>com.example</groupId>
+        <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>demo-project-hibernate-tutorial</artifactId>
-    <packaging>pom</packaging>
+    <modelVersion>4.0.0</modelVersion>
 
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>hibernate-practice-demo</artifactId>
+
+    <name>hibernate-practice-demo</name>
+    <!-- FIXME change it to the project's website -->
+    <url>http://www.example.com</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -31,12 +30,12 @@
             <version>8.0.32</version>
         </dependency> -->
         <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>6.1.7.Final</version>
+            <version>5.5.6.Final</version>
         </dependency>
-
 
         <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 
@@ -47,11 +46,20 @@
             <scope>system</scope>
             <systemPath>D:\ghanshyam\software\ojdbc8.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
 
-
+        <dependency>
+            <groupId>javax.transaction</groupId>
+            <artifactId>jta</artifactId>
+            <version>1.1</version>
+        </dependency>
     </dependencies>
     <build>
-        <sourceDirectory>src/main/java</sourceDirectory>
+       <!-- <sourceDirectory>src/main/java</sourceDirectory> -->
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
