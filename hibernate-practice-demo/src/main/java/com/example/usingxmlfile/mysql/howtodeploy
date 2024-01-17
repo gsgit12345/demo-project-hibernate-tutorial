@@ -1,0 +1,21 @@
+
+
+kubectl apply -f mysql-pv.yaml
+ kubectl apply -f mysql-pvc.yaml
+ kubectl apply -f mysql-deployment.yaml
+  kubectl apply -f mysql-service.yaml
+
+[iid@master-node ~]$ kubectl port-forward svc/mysql 3306:8080
+
+database name:-practice
+
+ kubectl run -it --rm --image=mysql:8.0 --restart=Never mysql-client -- mysql -h mysql -password="password"
+
+kubectl exec --stdin --tty mysql-68686674c4-l2bcd -- /bin/bash
+
+http://mysql.default.svc.cluster.local:3306
+
+curl http://10.244.0.95:3306
+
+
+docker run -i -t 509f09ca207d /bin/bash
