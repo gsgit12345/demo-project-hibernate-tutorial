@@ -13,7 +13,7 @@ public class SaveUserPost {
     public static void main(String str[])  {
         Transaction transaction = null;
         UserPost user=new UserPost();
-        user.setUserId(1);
+        user.setUserId(34);
         user.setUsername("harish");
         user.setNumberOfPosts(2);
         user.setCreatedBy("harish");
