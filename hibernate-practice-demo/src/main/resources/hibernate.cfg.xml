@@ -8,7 +8,7 @@
         <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
         <property name="hibernate.connection.url">jdbc:oracle:thin:@127.0.0.1:1521:orcl</property>
         <property name="hibernate.connection.username">HR</property>
-        <property name="hibernate.connection.password">hrdb</property>
+        <property name="hibernate.connection.password">delhi</property>
         <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
         <property name="hibernate.default_schema">HR</property>
         <property name="hbm2ddl.auto">update</property>
@@ -21,5 +21,25 @@
         <!-- We need to provide the exact mapping file
             which we have created earlier -->
         <mapping resource="UserPost.hbm.xml" />
+<!--
+        <mapping class="com.example.usingxmlfile.pojo.Employee"/>
+-->
+       <mapping class="com.example.usingxmlfile.associationmapping.onetoone.Foreigkey.AccountEntity"/>
+        <mapping class="com.example.usingxmlfile.associationmapping.onetoone.Foreigkey.EmployeeEntity"/>
+        <mapping class="com.example.usingxmlfile.associationmapping.onetoone.JoinTable.AccountEntityUsingJoinTable"/>
+        <mapping class="com.example.usingxmlfile.associationmapping.onetoone.JoinTable.EmployeeEntityUsingJoinTable"/>
+        <mapping class="com.example.usingxmlfile.associationmapping.onetoone.usingsharedpk.AccountEntityUsingSharedPK"/>
+        <mapping class="com.example.usingxmlfile.associationmapping.onetoone.usingsharedpk.EmployeeEntityUsingSharedPK"/>
+        <mapping class="com.example.usingxmlfile.associationmapping.manytomany.Employee"/>
+        <mapping class="com.example.usingxmlfile.associationmapping.manytomany.Project"/>
+
+        <mapping class="com.example.usingxmlfile.associationmapping.oneToMany.Answer"/>
+        <mapping class="com.example.usingxmlfile.associationmapping.oneToMany.Question"/>
+<!--        <mapping class="com.example.usingxmlfile.associationmapping.onetoone.mapsid.AccountEntity"/>
+        <mapping class="com.example.usingxmlfile.associationmapping.onetoone.mapsid.EmployeeEntity"/>-->
+
+
+
+
     </session-factory>
 </hibernate-configuration>

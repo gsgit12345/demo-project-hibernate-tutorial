@@ -13,9 +13,9 @@ public class SaveUserPost {
     public static void main(String str[])  {
         Transaction transaction = null;
         UserPost user=new UserPost();
-        user.setUserId(34);
+        user.setUserId(31);
         user.setUsername("harish");
-        user.setNumberOfPosts(2);
+        user.setNumberOfPosts(21);
         user.setCreatedBy("harish");
         user.setCreatedDate(new Date("2/3/2021"));
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
